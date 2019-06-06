@@ -1,0 +1,28 @@
+$primary-color: #fff;
+$button-hover: #212F3D;
+
+.container-fluid {
+  height: 100vh;
+  padding-top: 20vw !important;
+
+  h2 {
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    margin-bottom: 15%;
+  }
+
+  .welcome-copy {
+    margin-bottom: 25%;
+  }
+
+  .btn {
+    color: $primary-color;
+
+    &:hover {
+      color: $button-hover;
+    }
+  }
+}
+
+
