@@ -1,0 +1,9 @@
+<p>{{ interpolatedString }}</p>
+
+<hr>
+<input type="text" [value]="propertyBindedString">
+
+<button (click)="onButtonClick()">Click Me!</button>
+<hr>
+<input type="text" [(ngModel)]="bindedTwoWays" name="bindedTwoWays">
+<p>{{ bindedTwoWays }}</p>

@@ -4,7 +4,7 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './shared/modules/material/material.module';
 
-import { AngularFireModule  } from 'angularfire2';
+import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -13,6 +13,8 @@ import { WelcomeScreenComponent } from './features/welcome-screen/welcome-screen
 import { HeaderComponent } from './shared/components/header/header.component';
 import { HomeDashboardComponent } from './features/home-dashboard/home-dashboard.component';
 import { environment } from 'src/environments/environment';
+import { SideNavComponent } from './shared/components/side-nav/side-nav.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -20,7 +22,8 @@ import { environment } from 'src/environments/environment';
     AppComponent,
     WelcomeScreenComponent,
     HeaderComponent,
-    HomeDashboardComponent
+    HomeDashboardComponent,
+    SideNavComponent
   ],
   imports: [
     MDBBootstrapModule.forRoot(),
@@ -29,9 +32,10 @@ import { environment } from 'src/environments/environment';
     BrowserAnimationsModule,
     MaterialModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    FormsModule
   ],
-  schemas: [ NO_ERRORS_SCHEMA ],
+  schemas: [NO_ERRORS_SCHEMA],
   providers: [],
   bootstrap: [AppComponent]
 })
