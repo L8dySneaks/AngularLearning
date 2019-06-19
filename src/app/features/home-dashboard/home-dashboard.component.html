@@ -2,82 +2,11 @@
 
 <app-side-nav></app-side-nav>
 
-<div class="card-deck">
-  <!-- Card -->
-  <mdb-card>
-    <div class="view overlay waves-light" mdbWavesEffect>
-      <!-- Card img -->
-      <mdb-card-img src="https://mdbootstrap.com/img/Photos/Others/images/16.jpg" alt="Card image cap"></mdb-card-img>
-      <a>
-        <div class="mask rgba-white-slight"></div>
-      </a>
-    </div>
-    <!--Card content-->
-    <mdb-card-body>
-      <!--Title-->
-      <mdb-card-title>
-        <h4>Card Title</h4>
-      </mdb-card-title>
+<app-player>
+  <p>This is some test content from ng-content on player component</p>
 
-      <!--Text-->
-      <mdb-card-text> Some quick example text to build on the card title and make up the bulk of the card's
-        content.
-      </mdb-card-text>
-
-      <a href="#" mdbBtn color="primary" mdbWavesEffect>Button</a>
-    </mdb-card-body>
-  </mdb-card>
-
-  <!-- Card -->
-  <mdb-card>
-    <div class="view rgba-white-slight waves-light" mdbWavesEffect>
-      <!-- Card img -->
-      <mdb-card-img src="https://mdbootstrap.com/img/Photos/Others/images/14.jpg" alt="Card image cap"></mdb-card-img>
-      <a>
-        <div class="mask"></div>
-      </a>
-    </div>
-    <!--Card content-->
-    <mdb-card-body>
-      <!--Title-->
-      <mdb-card-title>
-        <h4>Card Title</h4>
-      </mdb-card-title>
-
-      <!--Text-->
-      <mdb-card-text> Some quick example text to build on the card title and make up the bulk of the card's
-        content.
-      </mdb-card-text>
-
-      <a href="#" mdbBtn color="primary" mdbWavesEffect>Button</a>
-    </mdb-card-body>
-  </mdb-card>
-
-  <!-- Card -->
-  <mdb-card>
-    <div class="view rgba-white-slight waves-light" mdbWavesEffect>
-      <!-- Card img -->
-      <mdb-card-img src="https://mdbootstrap.com/img/Photos/Others/images/15.jpg" alt="Card image cap"></mdb-card-img>
-      <a>
-        <div class="mask"></div>
-      </a>
-    </div>
-    <!--Card content-->
-    <mdb-card-body>
-      <!--Title-->
-      <mdb-card-title>
-        <h4>Card Title</h4>
-      </mdb-card-title>
-
-      <!--Text-->
-      <mdb-card-text> Some quick example text to build on the card title and make up the bulk of the card's
-        content.
-        <mat-chip-list>
-          <mat-chip color="primary" selected>2003</mat-chip>
-        </mat-chip-list>
-      </mdb-card-text>
-
-      <a href="#" mdbBtn color="primary" mdbWavesEffect>Button</a>
-    </mdb-card-body>
-  </mdb-card>
-</div>
+  <!-- These app-player-cards have property binding on them -->
+  <app-player-card #tempPlayer [player]="name"></app-player-card>
+  <app-player-card [player]="name"></app-player-card>
+  <app-player-card [player]="name"></app-player-card>
+</app-player>

@@ -15,6 +15,8 @@ import { HomeDashboardComponent } from './features/home-dashboard/home-dashboard
 import { environment } from 'src/environments/environment';
 import { SideNavComponent } from './shared/components/side-nav/side-nav.component';
 import { FormsModule } from '@angular/forms';
+import { PlayerCardComponent } from './features/player-card/player-card.component';
+import { PlayerComponent } from './features/player/player.component';
 
 
 @NgModule({
@@ -23,7 +25,9 @@ import { FormsModule } from '@angular/forms';
     WelcomeScreenComponent,
     HeaderComponent,
     HomeDashboardComponent,
-    SideNavComponent
+    SideNavComponent,
+    PlayerCardComponent,
+    PlayerComponent
   ],
   imports: [
     MDBBootstrapModule.forRoot(),

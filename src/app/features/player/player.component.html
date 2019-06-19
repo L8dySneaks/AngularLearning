@@ -1,0 +1,11 @@
+<!-- 
+  This is used for projected content
+  Therefore, I can call the player component on the home dashboard html, and add code into it to be spit out wherever ng-content is listed.
+ -->
+<ng-content></ng-content>
+
+<h1 class="players-header">List of Players</h1>
+
+<div id="player-cards">
+  <app-player-card class="players" *ngFor="let player of players" [player]="player"></app-player-card>
+</div>

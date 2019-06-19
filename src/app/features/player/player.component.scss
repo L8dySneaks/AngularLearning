@@ -1,0 +1,9 @@
+.players-header {
+  display: block;
+}
+
+#player-cards {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}

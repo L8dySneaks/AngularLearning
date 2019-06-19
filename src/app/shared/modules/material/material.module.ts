@@ -1,13 +1,16 @@
 import { NgModule } from '@angular/core';
 import { MatChipsModule } from '@angular/material/chips';
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
   declarations: [],
   imports: [
-    MatChipsModule
+    MatChipsModule,
+    MatCardModule
   ],
   exports: [
-    MatChipsModule
+    MatChipsModule,
+    MatCardModule
   ]
 })
 export class MaterialModule { }
