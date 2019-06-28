@@ -17,6 +17,8 @@ import { SideNavComponent } from './shared/components/side-nav/side-nav.componen
 import { FormsModule } from '@angular/forms';
 import { PlayerCardComponent } from './features/player-card/player-card.component';
 import { PlayerComponent } from './features/player/player.component';
+import { ParentComponent } from './testcomponents/parent/parent.component';
+import { ChildComponent } from './testcomponents/child/child.component';
 
 
 @NgModule({
@@ -27,7 +29,9 @@ import { PlayerComponent } from './features/player/player.component';
     HomeDashboardComponent,
     SideNavComponent,
     PlayerCardComponent,
-    PlayerComponent
+    PlayerComponent,
+    ParentComponent,
+    ChildComponent
   ],
   imports: [
     MDBBootstrapModule.forRoot(),
