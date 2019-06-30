@@ -1,3 +1,4 @@
+import { SuccessAlertComponent } from './testcomponents/success-alert/success-alert.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
@@ -19,6 +20,8 @@ import { PlayerCardComponent } from './features/player-card/player-card.componen
 import { PlayerComponent } from './features/player/player.component';
 import { ParentComponent } from './testcomponents/parent/parent.component';
 import { ChildComponent } from './testcomponents/child/child.component';
+import { WarningAlertComponent } from './testcomponents/warning-alert/warning-alert.component';
+import { MatChipsModule } from '@angular/material/chips';
 
 
 @NgModule({
@@ -31,7 +34,9 @@ import { ChildComponent } from './testcomponents/child/child.component';
     PlayerCardComponent,
     PlayerComponent,
     ParentComponent,
-    ChildComponent
+    ChildComponent,
+    WarningAlertComponent,
+    SuccessAlertComponent
   ],
   imports: [
     MDBBootstrapModule.forRoot(),
@@ -39,6 +44,7 @@ import { ChildComponent } from './testcomponents/child/child.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
+    MatChipsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireDatabaseModule,
     FormsModule
