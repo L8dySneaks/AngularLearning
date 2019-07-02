@@ -1,6 +1,16 @@
 <app-header></app-header>
 
 <app-side-nav></app-side-nav>
+<label>Username</label>
+<input
+  type="text"
+  [(ngModel)]="username">
+  <p>{{ username }}</p>
+
+  <button mat-raised-button
+    color="warn"
+    [disabled]="username === ''"
+    (click)="resetToEmpty()">Reset User</button>
 
 <app-player>
   <p>This is some test content from ng-content on player component</p>
@@ -35,3 +45,9 @@
   type="text"
   (input)="onUpdatePlayerName($event)">
   <p>{{ playerName }}</p>
+
+<!-- Two way binding -->
+<!-- <input
+  type="text"
+  [(ngModel)]="playerNameTwoWay">
+  <p>{{ playerNameTwoWay }}</p> -->

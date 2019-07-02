@@ -9,6 +9,9 @@ export class HomeDashboardComponent implements OnInit {
   allowNewServer = false;
   playerCreationStatus = 'No player was created';
   playerName = '';
+  playerNameTwoWay = 'Test Player Name';
+
+  username = '';
 
   constructor() {
     setTimeout(() => {
@@ -20,11 +23,25 @@ export class HomeDashboardComponent implements OnInit {
   ngOnInit() {
   }
 
+  resetToEmpty() {
+    if (this.username !== '') {
+      this.username = '';
+    }
+  }
+
   onCreatePlayer() {
-    this.playerCreationStatus = 'Player was created';
+    this.playerCreationStatus = 'Player was created. Name of player is: ' + this.playerName;
   }
 
   onUpdatePlayerName(event: any) {
     this.playerName = event.target.value;
+ }
+
+ onUpdatePlayerNameTwoWay(event: any) {
+   this.playerNameTwoWay = event.target.value;
+ }
+
+ updateUserName(event: any) {
+
  }
 }
