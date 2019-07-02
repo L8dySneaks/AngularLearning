@@ -1,2 +1,7 @@
 <h1>Current Count: {{ counter }}</h1>
 <app-child (counterChanged)="onCounterChanged($event)"></app-child>
+<br><br>
+<!-- This is some string interpolation example, anything that is output as a string  -->
+<p>{{ 'Server' }} with ID {{ serverId }} is {{ getServerStatus() }}</p>
+
+<!-- Example of property binding -->

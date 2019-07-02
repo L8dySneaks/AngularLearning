@@ -8,14 +8,20 @@ import { Component, ViewChild } from '@angular/core';
 })
 export class ParentComponent {
 
+  constructor() { }
+  serverId = 10;
+  serverStatus = 'offline';
+
   // @ViewChild(ChildComponent) child: ChildComponent;
   counter: number;
+
+  getServerStatus() {
+    return this.serverStatus;
+  }
 
   onCounterChanged($event) {
     this.counter = $event;
   }
-
-  constructor() { }
 
 
 }

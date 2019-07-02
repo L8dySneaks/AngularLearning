@@ -17,4 +17,21 @@
 
 <app-parent></app-parent>
 
+<hr>
 <br>
+<!-- This button uses property binding based off the boolean value of allowNewServer -->
+<!-- The click event for this is considered event binding -->
+<button mat-raised-button 
+        color="primary"
+        [disabled]="!allowNewServer"
+        (click)="onCreatePlayer()">Add Player</button>
+
+ <!-- <p [innerText]="allowNewServer"></p> -->
+
+<p>{{ playerCreationStatus }}</p>
+
+<!-- passing and using data with event binding -->
+<input 
+  type="text"
+  (input)="onUpdatePlayerName($event)">
+  <p>{{ playerName }}</p>
