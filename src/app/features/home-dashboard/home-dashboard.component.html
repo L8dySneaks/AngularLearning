@@ -44,7 +44,16 @@
 <input 
   type="text"
   (input)="onUpdatePlayerName($event)">
-  <p>{{ playerName }}</p>
+
+  <p *ngIf="playerCreated">Player was created, player name is {{ playerName }}</p>
+
+  <!-- using ngIf Else -->
+  <!-- <p *ngIf="playerCreated; else noPlayer">Player was created, player name is {{ playerName }}</p>
+  <ng-template #noPlayer>
+    <p>No player was created!</p>
+  </ng-template> -->
+
+
 
 <!-- Two way binding -->
 <!-- <input

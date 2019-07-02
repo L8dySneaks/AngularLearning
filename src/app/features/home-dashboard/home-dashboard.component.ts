@@ -10,10 +10,13 @@ export class HomeDashboardComponent implements OnInit {
   playerCreationStatus = 'No player was created';
   playerName = '';
   playerNameTwoWay = 'Test Player Name';
+  playerCreated = false;
 
   username = '';
 
   constructor() {
+
+
     setTimeout(() => {
       this.allowNewServer = true;
     }, 3000);
@@ -30,6 +33,7 @@ export class HomeDashboardComponent implements OnInit {
   }
 
   onCreatePlayer() {
+    this.playerCreated = true;
     this.playerCreationStatus = 'Player was created. Name of player is: ' + this.playerName;
   }
 

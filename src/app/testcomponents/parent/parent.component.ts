@@ -8,10 +8,13 @@ import { Component, ViewChild } from '@angular/core';
 })
 export class ParentComponent {
 
-  constructor() { }
   serverId = 10;
   serverStatus = 'offline';
 
+  constructor() {
+    this.serverStatus = Math.random() > 0.5 ? 'online' : 'offline';
+
+  }
   // @ViewChild(ChildComponent) child: ChildComponent;
   counter: number;
 
@@ -21,6 +24,10 @@ export class ParentComponent {
 
   onCounterChanged($event) {
     this.counter = $event;
+  }
+
+  getColor() {
+    return this.serverStatus === 'online' ? 'green' : 'red';
   }
 
 
