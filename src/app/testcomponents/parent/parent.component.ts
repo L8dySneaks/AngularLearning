@@ -10,7 +10,8 @@ export class ParentComponent {
 
   serverId = 10;
   serverStatus = 'offline';
-  toggleP = 'show';
+  showSecret = false;
+  log = [];
 
   constructor() {
     this.serverStatus = Math.random() > 0.5 ? 'online' : 'offline';
@@ -31,9 +32,15 @@ export class ParentComponent {
     return this.serverStatus === 'online' ? 'green' : 'red';
   }
 
-  toggleParagraph() {
-    return this.toggleP === 'show' ? 'block' : 'none';
+  onToggleDetails() {
+    this.showSecret = !this.showSecret;
+    // this.log.push(this.log.length + 1);
+    this.log.push(new Date());
   }
+
+  // toggleParagraph() {
+  //   return this.toggleP === 'show' ? 'block' : 'none';
+  // }
 
 
 
