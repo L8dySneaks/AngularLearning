@@ -10,6 +10,7 @@ export class ParentComponent {
 
   serverId = 10;
   serverStatus = 'offline';
+  toggleP = 'show';
 
   constructor() {
     this.serverStatus = Math.random() > 0.5 ? 'online' : 'offline';
@@ -29,6 +30,11 @@ export class ParentComponent {
   getColor() {
     return this.serverStatus === 'online' ? 'green' : 'red';
   }
+
+  toggleParagraph() {
+    return this.toggleP === 'show' ? 'block' : 'none';
+  }
+
 
 
 }

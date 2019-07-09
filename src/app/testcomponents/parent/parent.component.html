@@ -2,6 +2,9 @@
 <app-child (counterChanged)="onCounterChanged($event)"></app-child>
 <br><br>
 <!-- This is some string interpolation example, anything that is output as a string  -->
-<p [ngStyle]="{backgroundColor: getColor()}">{{ 'Server' }} with ID {{ serverId }} is {{ getServerStatus() }}</p>
+<p [ngStyle]="{backgroundColor: getColor()}"
+  [ngClass]="{online: serverStatus === 'online'}">{{ 'Server' }} with ID {{ serverId }} is {{ getServerStatus() }}</p>
 
-<!-- Example of property binding -->
+<!-- Practicing Directives -->
+<button (click)="toggleParagraph()">Display Details</button>
+<p [ngClass]="{display: toggleP === 'show'}">Secret Password = soccer</p>
